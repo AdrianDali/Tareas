@@ -1,24 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { TodoCounter } from './TodoCounter';
+import { TodoSearch } from './TodoSearch';
+import { CreateTodoButton } from './CreateTodoButton';
+import { TodoList } from './TodoList';
+import { TodoItem } from './TodoItem';
 
-function App() {
+/**Este es el Array de Items */
+const tareas = [
+  { text: 'Clase 4 Curso de Japones', complete: false },
+  { text: 'Tarea 6 Curso de Japones', complete: false },
+  { text: 'Reunion de Meet con companeros', complete: false },
+  { text: 'Repaso de apuntes ', complete:false },
+  
+];
+
+/** React.Fragment es para una etiqueta como componente como una etiqueta padre, 
+ *  en react solo se puede enviar una etiqueta padre por componente como una etiqueta
+ * 
+ *  App sera nuestra funcion principal que retornara varios elementos
+ */
+
+function App() { 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment >
+      <TodoCounter />
+
+      <TodoSearch />
+
+      <TodoList>
+      {tareas.map(todo => (
+        <TodoItem key={todo.text} 
+                  text={todo.text}  
+                  completed={todo.completed} />))}
+    
+      </TodoList>
+    
+      <CreateTodoButton />
+    </React.Fragment >
   );
 }
 
