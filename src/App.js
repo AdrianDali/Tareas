@@ -1,16 +1,17 @@
 import React from 'react';
-import { TodoCounter } from './TodoCounter';
-import { TodoSearch } from './TodoSearch';
-import { CreateTodoButton } from './CreateTodoButton';
-import { TodoList } from './TodoList';
-import { TodoItem } from './TodoItem';
+import { TareaCounter } from './TareaCounter';
+import { TareaSearch } from './TareaSearch';
+import { CreateTareaButton } from './CreateTareaButton';
+import { TareaList } from './TareaList';
+import { TareaItem } from './TareaItem';
 
-/**Este es el Array de Items */
+/**Este es el Array de Items  */
+/** primer parametro es la tarea y el segundo es si fue completada */
 const tareas = [
-  { text: 'Clase 4 Curso de Japones', complete: false },
-  { text: 'Tarea 6 Curso de Japones', complete: false },
-  { text: 'Reunion de Meet con companeros', complete: false },
-  { text: 'Repaso de apuntes ', complete:false },
+  { text: 'Clase 4 Curso de Japones', completed: true },
+  { text: 'Tarea 6 Curso de Japones', completed: true },
+  { text: 'Reunion de Meet con companeros', completed: false },
+  { text: 'Repaso de apuntes ', completed:false },
   
 ];
 
@@ -23,19 +24,23 @@ const tareas = [
 function App() { 
   return (
     <React.Fragment >
-      <TodoCounter />
+      <TareaCounter />
 
-      <TodoSearch />
+      <TareaSearch />
 
-      <TodoList>
-      {tareas.map(todo => (
-        <TodoItem key={todo.text} 
-                  text={todo.text}  
-                  completed={todo.completed} />))}
+      <TareaList>
+        
+      {/* cada ves que llamemos a tarea item enviaremos key que es para optimisar */
+      /*  Enviaremos el texto de nuestro arreglo de tareas */
+      /*  Enviaremos el tarea complete */
+      tareas.map(tarea => (
+        <TareaItem key={tarea.text} 
+                  text={tarea.text}  
+                  completed={tarea.completed} />))}
     
-      </TodoList>
+      </TareaList>
     
-      <CreateTodoButton />
+      <CreateTareaButton />
     </React.Fragment >
   );
 }

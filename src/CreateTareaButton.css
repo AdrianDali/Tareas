@@ -1,4 +1,4 @@
-.CreateTodoButton {
+.CreateTareaButton {
     background-color: #128c7e;
     box-shadow: 0px 5px 25px rgba(97, 218, 250, 0.5);
     border: none;
@@ -19,7 +19,7 @@
     transition: .3s ease;
   }
   
-  .CreateTodoButton:hover {
+  .CreateTareaButton:hover {
     transform: rotate(224deg);
   }
 

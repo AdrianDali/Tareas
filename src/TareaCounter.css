@@ -1,0 +1,15 @@
+.TareaCounter{
+    /** 
+    Estilos 
+    */
+    background-color: #128c7e;  /* es para poner el color de fondo */
+    font-size: 40px;              /* es para el tamano de la letra*/
+    text-align: center;           /* el alineado del texto en el centro */
+    margin: 0px 0px 30px 0px;     /* el margen que tendra en direccion manecillas del reloj */
+    padding: 48px;                 /*es espacio de relleno o margen interno*/
+    border-bottom-right-radius: 25px; /* el margen abajo a la derecha circular*/
+    border-bottom-left-radius: 25px; /* el margen abajo a la izquierda circular */
+    color: #fff;                   /* es el coler de la letra*/
+    font-family: 'Montserrat';      /*  es el tipo de letra*/
+
+}

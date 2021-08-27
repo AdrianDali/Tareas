@@ -1,8 +1,8 @@
 import React from 'react';
-import './TodoList.css';
+import './TareaList.css';
 
 /**Es el contenedor de la lista de tareas */
-function TodoList(props) {
+function TareaList(props) {
     return (
         <section>
             <ul>
@@ -12,4 +12,4 @@ function TodoList(props) {
     );
 }
 
-export { TodoList };
+export { TareaList };

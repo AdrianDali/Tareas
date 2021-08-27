@@ -1,0 +1,27 @@
+.TareaSearch{
+    background: #F9FBFC;    /* es el colore de fondo*/
+    border-radius: 50px ;      /* es el borde circular*/
+    border: 2px solid #128c7e; /*es el tamano del borde y su color*/
+    margin: 0 24px;  /*es el margen */
+    height: 64px;    /*es el alto */   
+    width: calc(100% - 62px);  /*es el ango en calculo de siempre 100% menos 62 px*/
+    font-size: 24px; /*es el tamano de la letra*/
+    text-align: center;  /*como va a estar alineado el texto*/ 
+    font-family: 'Montserrat';  /*es el tipo o familia de texto*/
+   font-weight: 400;    /*es el grueso de la letra*/
+   
+   box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25); /*Es la sombra que tendra la caja de texto*/
+}
+
+.TareaSearch::placeholder{  /*pseudoelemento*/
+    color: #A5A5A5;
+    font-family: 'Monsterrat';
+    font-weight: 400;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.TareaSearch:focus{
+    outline-color: #128c7e;
+    outline-offset: 1px;
+}
